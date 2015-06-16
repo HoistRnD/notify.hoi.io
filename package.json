@@ -1,0 +1,71 @@
+{
+  "name": "notify.hoi.io",
+  "version": "0.0.0",
+  "description": "Hoist notify api",
+  "main": "server.js",
+  "private": true,
+  "scripts": {
+    "test": "grunt test"
+  },
+  "config": {
+    "travis-cov": {
+      "threshold": 50
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:hoist/notify.hoi.io.git"
+  },
+  "author": "Hoist Apps Ltd",
+  "bugs": {
+    "url": "https://github.com/hoist/notify.hoi.io/issues"
+  },
+  "dependencies": {
+    "bcrypt": "*",
+    "config": "*",
+    "connect-flash": "*",
+    "connect-redis": "*",
+    "custom-errors": "git://github.com/techjacker/custom-errors",
+    "domain": "*",
+    "express": "*",
+    "express-winston": "*",
+    "extend": "^1.2.1",
+    "forever": "*",
+    "glob": "*",
+    "hoist-core": "git+ssh://git@github.com:hoist/hoist-core",
+    "moment": "*",
+    "mongoose": "*",
+    "mongoose-eventify": "*",
+    "mongoose-q": "*",
+    "mu2": "~0.5.20",
+    "newrelic": "*",
+    "passport": "*",
+    "pkginfo": "*",
+    "postmark": "~0.2.0",
+    "q": "*",
+    "raygun": "*",
+    "redis": "*",
+    "request": "*",
+    "underscore": "~1.5.2",
+    "validator": "*",
+    "winston": "*"
+  },
+  "devDependencies": {
+    "time-grunt": "*",
+    "load-grunt-tasks": "*",
+    "grunt": "*",
+    "grunt-cli": "*",
+    "grunt-develop": "*",
+    "grunt-contrib-jshint": "*",
+    "grunt-mocha-test": "*",
+    "blanket": "*",
+    "chai-as-promised": "*",
+    "chai": "*",
+    "mocha": "*",
+    "grunt-contrib-watch": "*",
+    "supertest": "*",
+    "cookie": "*",
+    "travis-cov": "~0.2.4",
+    "nock": "~0.23.0"
+  }
+}

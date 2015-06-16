@@ -1,0 +1,16 @@
+{
+    "mongo": {
+        "db": "mongodb://db/hoist-staging"
+    },
+    "redis": {
+        "host": "db"
+    },
+    "session": {
+        "secret": "hoist-staging",
+        "domain": ".placeholder.co.nz"
+    },
+    "debug": true,
+    "postmark": {
+        "key": "97e8e1fa-8e64-43f7-ba1d-61b70abd9808"
+    }
+}

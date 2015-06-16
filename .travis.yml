@@ -1,0 +1,22 @@
+language: node_js
+node_js:
+- '0.10'
+notifications:
+  email:
+  - owen@hoistapps.com
+  hipchat:
+    rooms:
+      secure: N6Snv32mIQ/8SoESY6Lc62cUMctFeir2Fs4gnSUwWOrHeSUS/Ljxsu/j0b8oueLanvf49bJ6na5Y7T/OCiuX3ckXgobCCiTxa8m96AvBXCcBS3Q3KSWw8Oq4jqJVF6hz2q1i+/7Sek0oRLkY5OOgQaSHjuaY1XfDfQM3sdNY64g=
+services:
+- redis
+- mongodb
+- couchdb
+after_success:
+- if [[ "$TRAVIS_BRANCH" != "master" ]]; then echo "Deployments are only done for
+  the master branch. "; exit 0; fi
+- echo "Deploying build $TRAVIS_BUILD_NUMBER"
+- bundle install
+- bundle exec cap production deploy
+env:
+  global:
+    secure: Nvom38Ikql7zpZuvHpdQjZH6rC3xmiWlb6ArSQPre/L9ulm20wcEUhIyUeg0NSbXwbzACgtGMnB4z66n3XHh+ePhr0FP6vDT1T+Fbj5eoVN+O/tAHA7nzTcMaimUhkKXY8wJSHtgE5qKOYys3+OhAYviUrOSOJC2rpd9YQA9faQ=
